@@ -28,6 +28,7 @@ class Paint:
     def clear(self):  # method to clear the canvas
         self.canvas.delete("all")
 
+
 root = Tk()
 gui = Paint(root)
 root.mainloop()
