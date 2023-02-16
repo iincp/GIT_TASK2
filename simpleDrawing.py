@@ -46,7 +46,7 @@ class Simple_drawing_window(QWidget):
 class Simple_drawing_window1(Simple_drawing_window):
     def __init__(self):
         QWidget.__init__(self, None)
-        self.setWindowTitle("Simple Github Drawing")
+        self.setWindowTitle("Simple Github Drawing1")
 
     #overiden method
     def paintEvent(self, e):
@@ -63,7 +63,7 @@ class Simple_drawing_window1(Simple_drawing_window):
 class Simple_drawing_window2(Simple_drawing_window):
     def __init__(self):
         QWidget.__init__(self, None)
-        self.setWindowTitle("Simple Github Drawing")
+        self.setWindowTitle("Simple Github Drawing2")
 
     #overiden method
     def paintEvent(self, e):
@@ -77,10 +77,10 @@ class Simple_drawing_window2(Simple_drawing_window):
         p.end()
 
 #derived class3
-class Simple_drawing_window2(Simple_drawing_window):
+class Simple_drawing_window3(Simple_drawing_window):
     def __init__(self):
         QWidget.__init__(self, None)
-        self.setWindowTitle("Simple Github Drawing")
+        self.setWindowTitle("Simple Github Drawing3")
 
     #overiden method
     def paintEvent(self, e):
@@ -93,27 +93,16 @@ class Simple_drawing_window2(Simple_drawing_window):
 
         p.end()
 
-class Simple_drawing_window1(Simple_drawing_window):
-    pass
-
-
-class Simple_drawing_window2(Simple_drawing_window):
-    pass
-
-
-class Simple_drawing_window3(Simple_drawing_window):
-    pass
-
 
 def main():
     app = QApplication(sys.argv)
 
-    k = Simple_drawing_window1()
-    w = Simple_drawing_window2()
-    t = Simple_drawing_window3()
-    k.show()
-    w.show()
-    t.show()
+    b = Simple_drawing_window1()
+    i = Simple_drawing_window2()
+    f = Simple_drawing_window3()
+    b.show()
+    i.show()
+    f.show()
 
     return app.exec()
 
