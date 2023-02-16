@@ -24,7 +24,7 @@ class Simple_drawing_window(QWidget):
 
         p.setPen(QColor(255, 127, 0))
         p.setBrush(QColor(255, 127, 0))
-        p.drawPie(50, 150, 100, 0, 180 * 16)
+        p.drawPie(50, 150,100, 100, 0, 180 * 16)
 
         p.drawPolygon(
             [QPoint(50, 200), QPoint(150, 200), QPoint(100, 400)]
@@ -35,7 +35,13 @@ class Simple_drawing_window(QWidget):
 
     #abstract method
     def draw(self):
-        raise NotImplementedError
+        raise  
+
+def Simple_drawing_window1(Simple_drawing_window):  
+    def __init__(self) : 
+
+
+
 
 
 def main():
