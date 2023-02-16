@@ -39,6 +39,18 @@ class Simple_drawing_window(QWidget):
         raise NotImplementedError
 
 
+class Simple_drawing_window1(Simple_drawing_window):
+    pass
+
+
+class Simple_drawing_window2(Simple_drawing_window):
+    pass
+
+
+class Simple_drawing_window3(Simple_drawing_window):
+    pass
+
+
 def main():
     app = QApplication(sys.argv)
 
