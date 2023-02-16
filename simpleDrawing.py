@@ -12,9 +12,26 @@ class Simple_drawing_window(QWidget):
         self.setWindowTitle("Simple Github Drawing")
         self.rabbit = QPixmap("images/rabbit.png")
 
-    def paintEvent(self, e):
+    def paintEvent(self, e): 
+        pass
+
+    # abstract method
+    def draw(self,e):
+        raise  
+
+class Simple_drawing_window1(Simple_drawing_window):
+    pass
+
+
+
+class Simple_drawing_window2(Simple_drawing_window):
+    def __init__(self) :
+        QWidget.__init__(self,None) 
+        self.setWindowTitle("Simple Drawing1")
+    def draw(self,n):  
         p = QPainter()
         p.begin(self)
+
         p.setPen(QColor(0, 0, 0))
         p.setBrush(QColor(0, 127, 0))
         p.drawPolygon([
@@ -33,15 +50,9 @@ class Simple_drawing_window(QWidget):
         p.drawPixmap(QRect(200, 100, 320, 320), self.rabbit)
         p.end()
 
-    #abstract method
-    def draw(self):
-        raise  
 
-def Simple_drawing_window1(Simple_drawing_window):  
-    def __init__(self) : 
-
-
-
+class Simple_drawing_window3(Simple_drawing_window):
+    pass
 
 
 def main():
