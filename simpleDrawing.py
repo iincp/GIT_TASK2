@@ -19,6 +19,7 @@ class Simple_drawing_window(QWidget):
     def draw(self,e):
         raise  
 
+
 class Simple_drawing_window1(Simple_drawing_window):
     def __init__(self):
         QWidget.__init__(self, None)
@@ -51,6 +52,8 @@ class Simple_drawing_window1(Simple_drawing_window):
             [QPoint(50, 200), QPoint(150, 200), QPoint(100, 400), ]
         )
 
+        p = QPainter()
+        p.begin(self)
         p.drawPixmap(QRect(200, 100, 320, 320), self.pic_1)
         p.end()
 
@@ -77,11 +80,6 @@ class Simple_drawing_window2(Simple_drawing_window):
         p.drawPolygon(
             [QPoint(50, 200), QPoint(150, 200), QPoint(100, 400)]
         )
-
-
-    # abstract method
-    def draw(self):
-        raise NotImplementedError
 
 #derived class1
 class Simple_drawing_window1(Simple_drawing_window):
