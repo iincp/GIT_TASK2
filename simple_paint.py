@@ -24,3 +24,10 @@ class Paint:
         x2 = event.x + 5
         y2 = event.y + 5
         self.canvas.create_oval(x1, y1, x2, y2, fill="#000000")  # black color code = #000000
+
+    def clear(self):  # method to clear the canvas
+        self.canvas.delete("all")
+
+root = Tk()
+gui = Paint(root)
+root.mainloop()
