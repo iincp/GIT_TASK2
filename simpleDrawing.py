@@ -33,6 +33,10 @@ class Simple_drawing_window(QWidget):
         p.drawPixmap(QRect(200, 100, 320, 320), self.rabbit)
         p.end()
 
+    #abstract method
+    def draw(self):
+        raise NotImplementedError
+
 
 def main():
     app = QApplication(sys.argv)
