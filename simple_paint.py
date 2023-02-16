@@ -17,3 +17,10 @@ class Paint:
         self.button.grid(row=3, column=1)
 
         self.canvas.bind("<B1-Motion>", self.mouse_event)
+
+    def mouse_event(self, event):  # method to draw
+        x1 = event.x - 5
+        y1 = event.y - 5
+        x2 = event.x + 5
+        y2 = event.y + 5
+        self.canvas.create_oval(x1, y1, x2, y2, fill="#000000")  # black color code = #000000
